@@ -69,7 +69,7 @@ app.get("/edit/:id", async (req, res) => {
    try {
       const u = await User.findById(req.params.id)
       res.render("editUser", {
-         titleView: "Update User",
+         titleView: "Cập nhật",
          u: u.toJSON(),
       })
    } catch (error) {
@@ -88,7 +88,7 @@ app.put("/inserUsers/:id", (req , res) => {
 
 app.get("/addUsers",(req , res) =>{
    res.render("addUser",{
-      titleView:"Inserter User",
+      titleView:"Thêm",
    })
 })
 app.post("/inserUsers", async(req , res ) =>{
@@ -130,7 +130,7 @@ app.get("/getAllProducts",(req , res) =>{
 
 app.get("/addProduct",(req , res) =>{
    res.render("addProduct",{
-      titleView:"Inserter Products",
+      titleView:"Thêm sản phẩm",
    })
 })
 
@@ -165,7 +165,7 @@ app.get("/editProduct/:id", async (req , res) =>{
        await product.findById(req.params.id)
       .then((products) =>{
           res.render("updateProduct",{
-         titleView:"Update Product",
+         titleView:"Sửa sản phẩm",
          products : products.toJSON()
       })
       })
@@ -181,16 +181,4 @@ app.put("/updateProduct/:id",(req , res) =>{
     .catch(error => res.status(500).render(error))
 })
 
-
-
-// app.get("/search", async (req, res) => {
-//    try {
-//      const name = req.query.search; 
-//      const users = await User.find({ name: { $regex: name, $options: "i" } }); // tìm kiếm người dùng có tên chứa chuỗi name
-    
-//      res.render("managerUser", {  users: users.map(user => user.toJSON()) }); // trả về view hiển thị danh sách kết quả
-//    } catch (error) {
-//      res.status(500).send(error.message);
-//    }
-//  });
 module.exports = app;
