@@ -8,7 +8,7 @@ app.use(bodyparser.urlencoded({extended:true}))
 app.use(bodyparser.json())
 app.use(express.json())
 app.use(methods("_method"))
-const port = 9999;
+const port = 8888;
 const controllers = require('./controllers/controlersAdmin')
 mongoose.connect('mongodb://127.0.0.1:27017/QUANLY')
                 .then(function(){
