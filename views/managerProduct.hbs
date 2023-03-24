@@ -1,0 +1,43 @@
+<div class="container">
+    <a href="/admin/home"><h3>Back</h3></a>
+    <!-- Search box -->
+
+    <!-- Table to display user list -->
+    <div class=" text-right float-right">
+        <a href="/admin/addProduct" class="btn btn-success">Thêm sản phẩm</a>
+    </div>
+    <table class="table" style="margin-top: 40px;">
+        <thead>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Hình Ảnh</th>
+                <th>Màu</th>
+                <th>Loại sản phẩm</th>
+                <th>Mã khách hàng</th>
+                <th>Tên khách hàng</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="">
+            {{#each product}}
+            <tr>
+                <td>{{this.code_product}}</td>
+                <td>{{this.name_product}}</td>
+                <td>{{this.price}}</td>
+                <td><img src="{{this.image}}" style="width: 50px; height: 50px; border-radius: 50%;
+                border-color: black; border-width: 10px;" /></td>
+                <td>{{this.color}}</td>
+                <td>{{this.type_product}}</td>
+                <td>{{this.id_KH}}</td>
+                <td>{{this.name_KH}}</td>
+                <td>
+                    <a href="/admin/editProduct/{{this._id}}" class="btn btn-success">Sửa</a>
+                    <a href="/admin/deleteProduct/{{this._id}}" class="btn btn-danger">Xoá</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

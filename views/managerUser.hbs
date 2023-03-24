@@ -1,0 +1,38 @@
+{{{titleView}}}
+<div class="container">
+    <a href="/admin/home">
+        <h3>Back</h3>
+    </a>
+
+    <div class=" text-right float-right">
+        <a href="/admin/addUsers" class="btn btn-success">Thêm khách hàng</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>PassWord</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="">
+            {{#each users}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td><img src="{{this.image}}" style="width: 50px; height: 50px; border-radius: 50%;
+                border-color: black; border-width: 10px;" /> </td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.password}}</td>
+                <td>
+                    <a href="/admin/edit/{{this._id}}" class="btn btn-success">Edit</a>
+                    <a href="/admin/delete/{{this._id}}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
