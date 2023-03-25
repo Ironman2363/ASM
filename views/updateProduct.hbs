@@ -29,11 +29,14 @@
         <div class="form-group col-sm-2">
             <label for="name">Màu Sắc:</label> <br>
             <select name="color" id="" style="height: 33px;">
-                <option value="red">red</option>
-                <option value="black">black</option>
-                <option value="white">white</option>
-                <option value="yellow">yellow</option>
-                <option value="aqua">aqua</option>
+                <option value="red">đỏ</option>
+                <option value="black">đen</option>
+                <option value="white">trắng</option>
+                <option value="yellow">vàng</option>
+                <option value="aqua">nâu</option>
+                <option value="vio">tím</option>
+                <option value="gr">xám</option>
+                <option value="ping">hồng</option>
             </select>
         </div>
     </div>
@@ -53,7 +56,7 @@
     <div class="form-group">
         <p for="image">Hình ảnh:</p>
         <img style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px;" src="{{products.image}}" />
-        <input type="file" class="form-control-file" id="image" name="image" value="{{products.image}}">
+        <input type="text" class="form-control-file" id="image" name="image" value="{{products.image}}">
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
 </form>

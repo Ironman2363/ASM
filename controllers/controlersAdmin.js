@@ -181,4 +181,8 @@ app.put("/updateProduct/:id",(req , res) =>{
     .catch(error => res.status(500).render(error))
 })
 
+app.get("/dangnhap",(req,res)=>{
+   res.render("login")
+})
+
 module.exports = app;
