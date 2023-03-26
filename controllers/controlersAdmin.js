@@ -31,7 +31,7 @@ app.post('/login', async (req, res) => {
          res.send("Error")
          return
       }
-      res.redirect("/admin/home")
+      res.redirect("/admin/user")
    } catch (error) {
       console.log(error);
    }

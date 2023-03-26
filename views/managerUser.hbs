@@ -1,11 +1,22 @@
 {{{titleView}}}
-<div class="container">
- <a href="/admin/home" class="btn btn-danger" style="margin-top: 20px;width: 150px;">Back</a>
+{{!-- <div class="container">
+ <a href="/admin/home" class="btn btn-danger" style="margin-top: 20px;width: 150px;">Back</a> --}}
+       <div class="form-row">
+        <div class="form-group col-md-2.5">
+<h3>
+        <a href="/admin/addUsers" class="btn btn-success" class="fa fa-plus" > <i class="fa fa-plus"></i> Thêm khách hàng</a>
+</h3>
+        </div>
+        <div class="form-group col-md-2.5">
+<h3>
+        <a href="/admin/product"class="btn btn-success" class="fa fa-plus" >Quản lý sản phẩm</a>
+</h3>
+        </div>
+       </div>
 
-    <div class=" text-left float-left" style="margin-top: 20px; ">
-        <a href="/admin/addUsers" class="btn btn-success" style="width: 150px;">Thêm khách hàng</a>
-    </div>
-    <table class="table-bordered" style="font-size: 20px; width: 1300px;">
+
+
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>STT</th>
@@ -16,21 +27,21 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody class="">
+        <tbody >
             {{#each users}}
             <tr>
-                <th scope="row">{{sum @index 1}}</th>
+                <th >{{sum @index 1}}</th>
                 <td><img src="{{image}}" style="width: 50px; height: 50px; border-radius: 50%;
                 border-color: black; border-width: 10px;" /> </td>
                 <td>{{this.name}}</td>
                 <td>{{this.email}}</td>
                 <td>{{this.password}}</td>
                 <td>
-                    <a href="/admin/edit/{{this._id}}" class="btn btn-success">Edit</a>
-                    <a href="/admin/delete/{{this._id}}" class="btn btn-danger">Delete</a>
+                    <a href="/admin/edit/{{this._id}}" ><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                    <a href="/admin/delete/{{this._id}}" onclick="return confirm('Bạn có muốn xoá không?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
                 </td>
             </tr>
             {{/each}}
         </tbody>
     </table>
-</div>
+{{!-- </div> --}}
