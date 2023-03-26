@@ -1,27 +1,29 @@
 
-            <div style="width: 800px; height: 650px; background-color: rgb(189, 200, 206); margin: auto;
-      margin-top: 100px; border-radius: 20px;">
-
-    <form action="admin/dangkyAdmin" method="POST"  style="padding: 80px;">
-           <h1 style="text-align: center;">Đăng ký</h1>
+    <form action="admin/dangkyAdmin" method="POST"  autocomplete="off" >
+           <h1 type="hidden">Đăng ký</h1>
+                 <div class="form-group">
+        <label for="name">Họ và tên:</label>
+        <input type="text" class="form-control" id="name" name="name" required >
+      </div>
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email"name="email" required style="border-radius: 10px;height: 40px;">
+        <label>Email:</label>
+        <input type="email" class="form-control" id="email"name="email" required >
       </div>
       <div class="form-group">
         <label for="password">Mật khẩu:</label>
-        <input type="password" class="form-control" id="password" name="passWord" required style="border-radius: 10px;height: 40px;">
+        <input type="password" class="form-control" id="password" name="passWord" required >
       </div>
-      <div class="form-group">
-        <label for="name">Họ và tên:</label>
-        <input type="text" class="form-control" id="name" name="name" required style="border-radius: 10px;height: 40px;">
-      </div>
-      <div class="form-group">
-        <label for="image">Hình ảnh:</label>
-        <input type="text" class="form-control-file" id="image" name="image" required style="border-radius: 10px;height: 40px;">
-      </div>
-      <button type="submit" class="btn btn-primary" style="width: 640px; height: 40px; border-radius: 10px;">Đăng ký</button>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="image">Link ảnh: </label>
+        <input type="text" class="form-control" id="image" name="image" >
+        </div>
+        {{!-- <div class="form-group col-md-6">
+          <label for="image">Chọn ảnh: </label>
+        <input type="file" class="form-control-file" id="image" name="image">
+        </div> --}}
 
-<a href="admin/dangnhap" style="width: 640px; height: 40px; border-radius: 10px;margin-top: 20px;" class="btn btn-primary" >Bỏ qua</a>
-    </form>
       </div>
+            <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Đăng kí</button>
+            <a href="admin/dangnhap" class="btn btn-primary" >Bỏ qua</a>
+    </form>
