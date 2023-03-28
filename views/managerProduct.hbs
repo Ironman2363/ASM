@@ -1,55 +1,68 @@
-     <div class="form-row">
-        <div class="form-group col-md-2.5">
+<div class="form-row">
+  <div class="form-group col-md-2.5">
     <h3>
-        <a href="/admin/addProduct" class="btn btn-success" ><i class="fa fa-plus"></i> Thêm sản phẩm</a>
+      <a href="/admin/addProduct" class="btn btn-success"><i
+          class="fa fa-plus"
+        ></i>
+        Thêm sản phẩm</a>
     </h3>
-        </div>
-        <div class="form-group col-md-2.5">
-<h3>
-        <a href="/admin/user"class="btn btn-primary" class="fa fa-plus" >Quản lý khách hàng</a>
-</h3>
-        </div>
-                {{!-- <div class="form-group col-md-2.5">
+  </div>
+  <div class="form-group col-md-2.5">
+    <h3>
+      <a href="/admin/user" class="btn btn-primary" class="fa fa-plus">Quản lý
+        khách hàng</a>
+    </h3>
+  </div>
+  {{! <div class="form-group col-md-2.5">
 <h3>
         <a href="admin/dangnhap"class="btn btn-danger" class="fa fa-plus" >Đăng xuất</a>
 </h3>
-        </div> --}}
-        
-       </div>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Mã sản phẩm</th>
-                <th>Tên sản phẩm</th>
-                <th>Giá</th>
-                <th>Hình Ảnh</th>
-                <th>Màu</th>
-                <th>Loại sản phẩm</th>
-                <th>Mã khách hàng</th>
-                <th>Tên khách hàng</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody >
-            {{#each product}}
-            <tr>
-                <td>{{this.code_product}}</td>
-                <td>{{this.name_product}}</td>
-                <td>{{this.price}}</td>
-                <td><img src="{{this.image}}" style="width: 50px; height: 50px; border-radius: 50%;
-                border-color: black; border-width: 10px;" /></td>
-                <td>{{this.color}}</td>
-                <td>{{this.type_product}}</td>
-                <td>{{this.id_KH}}</td>
-                <td>{{this.name_KH}}</td>
-                <td>
-                    <div class="btn-group">
-                    <a href="/admin/editProduct/{{this._id}}" ><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
-                    <a href="/admin/deleteProduct/{{this._id}}" onclick="return confirm('Bạn có muốn xoá sản phẩm này không ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
-                    </div>
+        </div> }}
 
-                </td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
+</div>
+<table class="table table-bordered">
+  <thead style="background-color: #32383e; color: aliceblue;">
+    <tr>
+      <th>Mã sản phẩm</th>
+      <th>Tên sản phẩm</th>
+      <th>Giá</th>
+      <th>Hình Ảnh</th>
+      <th>Màu</th>
+      <th>Loại sản phẩm</th>
+      <th>Mã khách hàng</th>
+      <th>Tên khách hàng</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each product}}
+      <tr>
+        <td style="text-align: center;">{{this.code_product}}</td>
+        <td style="text-align: center;">{{this.name_product}}</td>
+        <td style="text-align: center;">{{this.price}}</td>
+        <td style="text-align: center;"><img
+            src="{{this.image}}"
+            style="width: 100%;height:80px;;
+                border-color: black;"
+          /></td>
+        <td style="text-align: center;">{{this.color}}</td>
+        <td style="text-align: center;">{{this.type_product}}</td>
+        <td style="text-align: center;">{{this.id_KH}}</td>
+        <td style="text-align: center;">{{this.name_KH}}</td>
+        <td style="text-align: center;">
+          <div class="btn-group">
+            <a href="/admin/editProduct/{{this._id}}"><i
+                class="fa fa-pencil fa-lg"
+                aria-hidden="true"
+              ></i></a>
+            <a
+              href="/admin/deleteProduct/{{this._id}}"
+              onclick="return confirm('Bạn có muốn xoá sản phẩm này không ?');"
+            ><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+          </div>
+
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

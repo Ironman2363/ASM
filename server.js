@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(methods("_method"))
 const port = 8888;
 const controllers = require('./controllers/controlersAdmin')
-mongoose.connect('mongodb+srv://phamtiendungvn2363:phamtiendungvn2363@quanlyquanao.bmudawo.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb://127.0.0.1:27017/QUANLY')
                 .then(function(){
                     console.log("Kết nối MongoDB thành công !")
                 })

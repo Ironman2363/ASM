@@ -37,11 +37,6 @@ app.post('/login', async (req, res) => {
    }
 })
 
-app.get("/home",(req , res) =>{
-   res.render("home")
-})
-
-
 /// users 
 app.get("/getAllUsers", (req, res) => {
    const u = User.find({})
@@ -183,6 +178,9 @@ app.put("/updateProduct/:id",(req , res) =>{
 
 app.get("/dangnhap",(req,res)=>{
    res.render("login")
+})
+app.get("/dangky",(req,res)=>{
+   res.render("dangky")
 })
 
 module.exports = app;

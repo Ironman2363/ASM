@@ -1,15 +1,43 @@
+<section>
+  <form action="/admin/login" method="POST" autocomplete="off">
+    <h1
+      type="hidden"
+      style="    font-size: 2em;
+    text-align: center;"
+    >Đăng Nhập</h1>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Mật khẩu:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="passWord"
+        required
+      />
+    </div>
+    <button
+      type="submit"
+      class="btn btn-info"
+      style="    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;"
+    >Đăng Nhập</button>
 
-
-
-                    <form action="/admin/login" method="POST"autocomplete="off">
-          <h1 type="hidden" >Đăng Nhập</h1>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email"  name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Mật khẩu:</label>
-        <input type="password" class="form-control" id="password"  name="passWord" required >
-      </div>
-       <button type="submit"  class="btn btn-info" >Đăng Nhập</button>
-      </form>
+    </div>
+  </form>
+</section>
