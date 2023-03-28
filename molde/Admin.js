@@ -2,10 +2,18 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Admin = new Schema({
-    email: String,
-    passWord: String,
-    name: String,
-    image:String,
+    email:{
+       type:String
+    },
+    passWord: {
+      type:String
+   } ,
+    name: {
+      type:String
+   } ,
+    image:{
+      type:String
+   } 
 
   });
 
