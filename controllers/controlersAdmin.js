@@ -28,7 +28,8 @@ app.post('/login', async (req, res) => {
       const password = req.body.passWord;
       const users = await Admin.findOne({ email: email, passWord: password })
       if (!users) {
-         res.send("Error")
+         const error = "Thông tin không chính xác"
+         res.render("login",{error})
          return
       }else{
          app.get("/getAllUsers", (req, res) => {
