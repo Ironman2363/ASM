@@ -1,72 +1,115 @@
 <h3>{{titleView}}</h3>
 
 <form action="/admin/inserProduct" method="POST" style="margin-top: 40px;">
-    <div class="row">
-        <div class="form-group col-sm-10">
-            <label for="email">Mã Sản Phẩm:</label>
-            <input type="text" class="form-control" id="email" name="code_product"
-                value="{{products.code_product}}" required>
-        </div>
-        <div class="form-group col-sm-10">
-            <label for="text">Tên Sản Phẩm:</label>
-            <input type="" class="form-control" required name="name_product" value="{{products.name_product}}">
-        </div>
-        <div class="form-group col-sm-10">
-            <label for="text">Loại Sản Phẩm:</label><br>
-            <select  name="type_product" id="" style="height: 33px; ">
-                <option value="Áo dài tay">Quần jean</option>
-                <option value="Áo ngắn tay">Áo khoác</option>
-                <option value="Áo phông">Áo phông</option>
-                <option value="Áo cổ tròn">Áo len</option>
-                <option value="Áo kẻ">Quần joger</option>
-            </select>
-        </div>
-        <div class="form-group col-sm-10">
-            <label for="name">Giá Sản Phẩm:</label>
-            <input type="number" class="form-control" id="name" required name="price" value="{{products.price}}">
-        </div>
-        <div class="form-group col-sm-4">
-            <label for="name">Màu Sắc:</label> <br>
-            <select name="color" id="" style="height: 33px;">
-                <option value="red">đỏ</option>
-                <option value="black">đen</option>
-                <option value="white">trắng</option>
-                <option value="yellow">vàng</option>
-                <option value="aqua">nâu</option>
-                <option value="vio">tím</option>
-                <option value="gr">xám</option>
-                <option value="ping">hồng</option>
-            </select>
-        </div>
+  <div class="row">
+    <div class="form-group col-sm-10">
+      <label for="email">Mã Sản Phẩm:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        name="code_product"
+        value="{{products.code_product}}"
+        required
+      />
     </div>
-    <div class="row" style="margin-top: 20px;">
-         <div class="form-group col-sm-6">
-            <label for="email">Mã Khách Hàng:</label>
-            <input type="text" class="form-control" id="email" required name="id_KH"
-                value="{{products.id_KH}}">
-        </div>
-        <div class="form-group col-sm-10">
-            <label for="text">Tên Khách Hàng:</label>
-            <input type="" class="form-control" required name="name_KH" value="{{products.name_KH}}">
-        </div>
+    <div class="form-group col-sm-10">
+      <label for="text">Tên Sản Phẩm:</label>
+      <input
+        type=""
+        class="form-control"
+        required
+        name="name_product"
+        value="{{products.name_product}}"
+      />
     </div>
-
-
-    <div class="form-group">
-        <p for="image">Hình ảnh:</p>
-        <img style="width: 200px; height: 200px; border-radius: 25%; margin-bottom: 10px;" src="{{products.image}}" />
-        <input type="text"  id="image" name="image" value="{{products.image}}" required>
+    <div class="form-group col-sm-10">
+      <label for="text">Loại Sản Phẩm:</label><br />
+      <select name="type_product" id="" style="height: 33px; ">
+        <option value="Áo dài tay">Quần jean</option>
+        <option value="Áo ngắn tay">Áo khoác</option>
+        <option value="Áo phông">Áo phông</option>
+        <option value="Áo cổ tròn">Áo len</option>
+        <option value="Áo kẻ">Quần joger</option>
+      </select>
     </div>
-             <div class="form-row">
-        <div class="form-group col-md-2.5">
-      <button type="submit" class="btn btn-primary" onclick="return confirm('Bạn có muốn sửa thông tin này không?');">Save</button>
+    <div class="form-group col-sm-10">
+      <label for="name">Giá Sản Phẩm:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="name"
+        required
+        name="price"
+        value="{{products.price}}"
+      />
+    </div>
+    <div class="form-group col-sm-4">
+      <label for="name">Màu Sắc:</label>
+      <br />
+      <select name="color" id="" style="height: 33px;">
+        <option value="red">đỏ</option>
+        <option value="black">đen</option>
+        <option value="white">trắng</option>
+        <option value="yellow">vàng</option>
+        <option value="aqua">nâu</option>
+        <option value="vio">tím</option>
+        <option value="gr">xám</option>
+        <option value="ping">hồng</option>
+      </select>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 20px;">
+    <div class="form-group col-sm-6">
+      <label for="email">Mã Khách Hàng:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        required
+        name="id_KH"
+        value="{{products.id_KH}}"
+      />
+    </div>
+    <div class="form-group col-sm-10">
+      <label for="text">Tên Khách Hàng:</label>
+      <input
+        type=""
+        class="form-control"
+        required
+        name="name_KH"
+        value="{{products.name_KH}}"
+      />
+    </div>
+  </div>
 
-        </div>
-        <div class="form-group col-md-2.5">
+  <div class="form-group">
+    <p for="image">Hình ảnh:</p>
+    <img
+      style="width: 200px; height: 200px; border-radius: 25%; margin-bottom: 10px;"
+      src="{{products.image}}"
+    />
+    <input
+      type="text"
+      id="image"
+      name="image"
+      value="{{products.image}}"
+      required
+    />
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-2.5">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        onclick="return confirm('Bạn có muốn sửa thông tin này không?');"
+      >Save</button>
 
+    </div>
+    <div class="form-group col-md-2.5">
 
-      <h3><a href="/admin/product" class="btn btn-danger" >Huỷ</a></h3>
+      <h3><a href="/admin/product" class="btn btn-danger">Huỷ</a></h3>
 
-        </div>
-       </div>
+    </div>
+  </div>
 </form>
